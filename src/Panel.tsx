@@ -10,16 +10,13 @@ export const Panel: React.FC<PanelProps> = (props) => {
   const api = useStorybookApi();
 
   const story: any = api.getCurrentStoryData();
-
   if (!story) {
     return null;
   }
 
   return (
     <AddonPanel {...props}>
-      <pre>story: {JSON.stringify(story)}</pre>
-      <br/>
-      <pre>args: {JSON.stringify(story.args)}</pre>
+      <pre>{JSON.stringify(story.args)}</pre>
     </AddonPanel>
   );
 };
