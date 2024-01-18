@@ -1,3 +1,15 @@
+# v0.0.10 (Fri Jan 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- delete preview (luong.ngo@smartbox.com)
+
+#### Authors: 1
+
+- luong.ngo (luong.ngo@smartbox.com)
+
+---
+
 # v0.0.9 (Thu Jan 18 2024)
 
 #### ⚠️ Pushed to `main`
