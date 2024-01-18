@@ -1,10 +1,11 @@
 import type { DecoratorFunction } from "@storybook/addons";
+import { useEffect, useGlobals } from "@storybook/addons";
 
 export const withGlobals: DecoratorFunction = (StoryFn, context) => {
-  // const [{ myAddon }] = useGlobals();
-  // // Is the addon being used in the docs panel
-  // const isInDocs = context.viewMode === "docs";
-  // const { theme } = context.globals;
+  const [{ myAddon }] = useGlobals();
+  // Is the addon being used in the docs panel
+  const isInDocs = context.viewMode === "docs";
+  const { theme } = context.globals;
 
   // useEffect(() => {
   //   // Execute your side effect here
