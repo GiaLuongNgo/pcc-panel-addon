@@ -17,7 +17,9 @@ export const Panel: React.FC<PanelProps> = (props) => {
 
   return (
     <AddonPanel {...props}>
-      <p>{JSON.stringify(story.args)}</p>
+      <pre>story: {JSON.stringify(story)}</pre>
+      <br/>
+      <pre>args: {JSON.stringify(story.args)}</pre>
     </AddonPanel>
   );
 };

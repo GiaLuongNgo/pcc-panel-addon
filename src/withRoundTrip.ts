@@ -1,12 +1,9 @@
 import { useChannel } from "@storybook/addons";
-import type {
-  Renderer,
-  PartialStoryFn as StoryFunction,
-} from "@storybook/types";
+import type { DecoratorFunction } from "@storybook/addons";
 import { STORY_CHANGED } from "@storybook/core-events";
 import { EVENTS } from "./constants";
 
-export const withRoundTrip = (storyFn: StoryFunction<Renderer>) => {
+export const withRoundTrip: DecoratorFunction = (storyFn) => {
   const emit = useChannel({
     [EVENTS.REQUEST]: () => {
       emit(EVENTS.RESULT, {
@@ -46,6 +43,5 @@ export const withRoundTrip = (storyFn: StoryFunction<Renderer>) => {
       });
     },
   });
-
   return storyFn();
 };
