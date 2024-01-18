@@ -9,7 +9,7 @@ interface PanelProps {
 export const Panel: React.FC<PanelProps> = (props) => {
   const api = useStorybookApi();
 
-  const story = api.getCurrentStoryData();
+  const story: any = api.getCurrentStoryData();
 
   if (!story) {
     return null;
